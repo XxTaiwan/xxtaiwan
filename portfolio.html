@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Group10</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #227526;
+            color: white;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .logo-img {
+            width: 45px;
+            height: 45px;
+            object-fit: contain;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            padding: 20px;
+        }
+        .section-title {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        .members-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+        }
+        .member-card {
+            text-align: center;
+        }
+        .member-image {
+            width: 100px;
+            height: 100px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 50%;
+            margin: 0 auto 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="log.jpg" alt="Group10 Logo" class="logo-img">
+                Group10 Online Portfolio
+            </div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="blog.html">Blog</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Get in Touch</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="gallery">
+        <div class="container">
+            <h2 class="section-title">Portfolio</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="11.jpg" alt="Activity 3" onclick="openModal(this)">
+                    <div class="gallery-caption">Programming: Decimal to Binary Calculator</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="11.1.jpg" alt="Activity 3" onclick="openModal(this)">
+                    <div class="gallery-caption">Programming: Decimal to Binary Calculator (Alternate View)</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="12.jpg" alt="Activity 3" onclick="openModal(this)">
+                    <div class="gallery-caption">Programming: Radix Converter</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="5.1.1.jpg" alt="Activity 1" onclick="openModal(this)">
+                    <div class="gallery-caption">Project Charter and Stakeholder Analysis</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="5.1.2.jpg" alt="Activity 1" onclick="openModal(this)">
+                    <div class="gallery-caption">Project Charter and Stakeholder Analysis (Alternate View)</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="5.2.1.jpg" alt="Activity 2" onclick="openModal(this)">
+                    <div class="gallery-caption">Charting: Work Breakdown Structure</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="5.2.2.jpg" alt="Activity 2" onclick="openModal(this)">
+                    <div class="gallery-caption">Charting: Gantt Chart</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="5.3.1.jpg" alt="Activity 3" onclick="openModal(this)">
+                    <div class="gallery-caption">Risk Management and Quality Planning</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="5.3.2.jpg" alt="Activity 3" onclick="openModal(this)">
+                    <div class="gallery-caption">Risk Management and Quality Planning (Alternate View 1)</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="5.3.3.jpg" alt="Activity 3" onclick="openModal(this)">
+                    <div class="gallery-caption">Risk Management and Quality Planning (Alternate View 2)</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="cat.jpg" alt="Activity 4" onclick="openModal(this)">
+                    <div class="gallery-caption">Pixel</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="video-section">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center; margin-bottom: 20px;">Videos</h2>
+            <div class="video-container" style="margin-bottom: 40px; text-align: center;">
+                <video width="80%" height="500" controls>
+                    <source src="V1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-caption" style="margin-top: 10px;">Bitwise and Arithmetic Calculators - Part 1</div>
+            </div>
+            <div class="video-container" style="margin-bottom: 40px; text-align: center;">
+                <video width="80%" height="500" controls>
+                    <source src="V2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-caption" style="margin-top: 10px;">Bitwise and Arithmetic Calculators - Part 2</div>
+            </div>
+        </div>
+    </section>
+    <div class="modal" id="imageModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); justify-content: center; align-items: center; z-index: 1000;">
+        <span class="modal-close" onclick="closeModal()" style="position: absolute; top: 20px; right: 20px; color: white; font-size: 2rem; cursor: pointer;">&times;</span>
+        <img id="modalImage" src="" alt="Expanded View" style="max-width: 90%; max-height: 90%;">
+    </div>
+
+    <script>
+        function openModal(image) {
+            const modal = document.getElementById('imageModal');
+            const modalImage = document.getElementById('modalImage');
+            modalImage.src = image.src; // Set the modal image source to the clicked image source
+            modal.style.display = 'flex'; // Show the modal
+        }
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.style.display = 'none'; // Hide the modal
+        }
+    </script>
+    <footer>
+        <div class="container">
+            <p>&copy; CC1 GROUP10 2025.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

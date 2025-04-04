@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Group10</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #227526;
+            color: white;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .logo-img {
+            width: 45px;
+            height: 45px;
+            object-fit: contain;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            padding: 20px;
+        }
+        .section-title {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        .members-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+        }
+        .member-card {
+            text-align: center;
+        }
+        .member-image {
+            width: 100px;
+            height: 100px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 50%;
+            margin: 0 auto 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="log.jpg" alt="Group10 Logo" class="logo-img">
+                Group10 Online Portfolio
+            </div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="blog.html">Blog</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Get in Touch</a>
+            </nav>
+        </div>
+    </header>
+    <section class="about-section">
+        <div class="container">
+            <h2 class="section-title">About Us</h2>
+            <p>
+                This portfolio showcases our journey through the semester. Together, we tackled challenges, 
+                shared knowledge, and pushed each other to deliver our best work.
+            </p>
+            <div class="group-description">
+                <h3>People behind this Project</h3>
+                <div class="members-grid" style="grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));">
+                    <a href="cj.jpg" class="member-card">
+                        <div class="member-image" style="background-image: url('cj.jpg');"></div>
+                        <h3>Castress, Tristan Cj</h3>
+                    </a>
+                    <a href="chris.jpg" class="member-card">
+                        <div class="member-image" style="background-image: url('chris.jpg');"></div>
+                        <h3>Gotim, Chris Jomari</h3>
+                    </a>
+                    <a href="summer.jpg" class="member-card">
+                        <div class="member-image" style="background-image: url('summer.jpg');"></div>
+                        <h3>Sotto, Danniella Schenly Summer</h3>
+                    </a>
+                    <a href="dharren.jpg" class="member-card">
+                        <div class="member-image" style="background-image: url('dharren.jpg');"></div>
+                        <h3>Villanueva, Dharren Kyle</h3>
+                    </a>
+                    <a href="ferdz.jpg" class="member-card">
+                        <div class="member-image" style="background-image: url('ferdz.jpg');"></div>
+                        <h3>Eheta, Ferdinand</h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>&copy; CC1 GROUP10 2025.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

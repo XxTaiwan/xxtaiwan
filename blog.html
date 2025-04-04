@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Group10</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #227526;
+            color: white;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .logo-img {
+            width: 45px;
+            height: 45px;
+            object-fit: contain;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            padding: 20px;
+        }
+        .section-title {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        .members-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+        }
+        .member-card {
+            text-align: center;
+        }
+        .member-image {
+            width: 100px;
+            height: 100px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 50%;
+            margin: 0 auto 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="log.jpg" alt="Group10 Logo" class="logo-img">
+                Group10 Online Portfolio
+            </div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="blog.html">Blog</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Get in Touch</a>
+            </nav>
+        </header>
+        <section class="about-section">
+            <div class="container">
+            <h2 class="section-title">Blog Section</h2>
+            <div class="search-bar" style="display: flex; justify-content: center; margin-bottom: 20px;">
+                <input type="text" placeholder="Search posts..." class="search-input" style="padding: 10px; width: 60%; border: 2px solid #227526; border-radius: 5px; outline: none; font-size: 16px;">
+                <button class="search-button" style="padding: 10px 20px; margin-left: 10px; background-color: #227526; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">Search</button>
+            </div>
+            <div class="posts-box" style="text-align: center; padding: 20px; border: 2px dashed #227526; border-radius: 10px; background-color: #f9f9f9;">
+                <p style="font-size: 18px; color: #555;">Check back soon. Once posts are published, you’ll see them here.</p>
+            </div>
+            </div>
+        </section>
